@@ -10,7 +10,7 @@ router.post('/', withAuth, async (req, res) => {
       });
 
       req.session.save(() => {
-        req.session.exercise_id = newExercise.id;
+        // req.session.exercise_id = newExercise.id;
   
         res.status(200).json(newExercise);
       });
