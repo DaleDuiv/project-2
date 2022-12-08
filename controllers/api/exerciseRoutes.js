@@ -8,8 +8,13 @@ router.post('/', withAuth, async (req, res) => {
         exercise: req.session.exercise,
         user_id: req.session.user_id,
       });
+
+      req.session.save(() => {
+        req.session.exercise_id = newExercise.id;
   
-      res.status(200).json(newExercise);
+        res.status(200).json(newExercise);
+      });
+      
     } catch (err) {
       res.status(400).json(err);
     }
