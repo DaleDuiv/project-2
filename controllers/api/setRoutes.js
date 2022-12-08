@@ -5,11 +5,12 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
     try {
       const newSet = await Set.create({
-        reps: req.session.reps,
-        weight: req.session.weight,
+        reps: req.body.reps,
+        weight: req.body.weight,
+        exercise_id: req.session.exercise_id
       });
   
-      res.status(200).json(newExercise);
+      res.status(200).json(newSet);
     } catch (err) {
       res.status(400).json(err);
     }
