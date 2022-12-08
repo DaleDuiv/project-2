@@ -39,3 +39,9 @@ THEN I can add the reps and weight I performed and it is added along with the da
 ## Usage
 
 ## Credits
+
+Made by
+
+- [Brodie Marshall](https://github.com/brodie02)
+- [Shiham Jamaldeen](https://github.com/shiham-jamaldeen)
+- [Dale Dulvesteyn](https://github.com/DaleDuiv)
