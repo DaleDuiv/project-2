@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection.js");
-const User = require("./user.js");
+const user = require("./user.js");
 
 class Exercise extends Model {}
 
@@ -21,12 +21,13 @@ Exercise.init(
       type: DataTypes.INTEGER,
       references: { model: "user", key: "id" },
     },
-
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "excercise",
+    modelName: "exercise",
   }
 );
 module.exports = Exercise;
