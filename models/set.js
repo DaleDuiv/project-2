@@ -8,9 +8,14 @@ Set.init(
   {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 
-    date: { type: DataTypes.DATEONLY, defaultValue: DataTypes.NOW },
+    //date: { type: DataTypes.DATEONLY, defaultValue: DataTypes.NOW },
 
-    time: { type: DataTypes.DATE, defaultValue: DataTypes.TIME },
+    //time: { type: DataTypes.DATE, defaultValue: DataTypes.TIME },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
 
     reps: {
       type: DataTypes.INTEGER,
