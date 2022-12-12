@@ -1,14 +1,14 @@
 [
     {
-        "exercise_name": "Bench Press",
+        "exerciseName": "Bench Press",
         "user_id": "1"
     },
     {
-        "exercise_name": "Dead Lift",
+        "exerciseName": "Dead Lift",
         "user_id": "1"
     },
     {
-        "exercise_name": "Barbell Squat",
+        "exerciseName": "Barbell Squat",
         "user_id": "1"
     }
 ]
