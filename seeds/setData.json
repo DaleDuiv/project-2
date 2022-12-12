@@ -1,0 +1,32 @@
+[
+    {
+        "reps": "8",
+        "weight": "90",
+        "exercise_id": "1"
+    },
+    {
+        "reps": "6",
+        "weight": "90",
+        "exercise_id": "1"
+    },
+    {
+        "reps": "8",
+        "weight": "150",
+        "exercise_id": "2"
+    },
+    {
+        "reps": "8",
+        "weight": "140",
+        "exercise_id": "2"
+    },
+    {
+        "reps": "8",
+        "weight": "120",
+        "exercise_id": "3"
+    },
+    {
+        "reps": "6",
+        "weight": "120",
+        "exercise_id": "3"
+    }
+]
