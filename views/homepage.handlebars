@@ -1,0 +1,20 @@
+{{#each exercises as |exercise|}}
+<div class="container">
+  <div class="container-left">
+    <p>add exercise list here</p>
+    <ul>
+      <li>Squats</li>
+      <li>add another exercise</li>
+
+    </ul>
+  </div>
+  {{/each}}
+  {{#each sets as |set|}} 
+  <div class="container-right">
+    <h2>Current exercise</h2>
+    <span>{{set.day}}</span>
+
+  </div>
+  {{/each}}
+</div>
+
