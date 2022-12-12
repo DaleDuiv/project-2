@@ -8,11 +8,6 @@ Set.init(
   {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 
-    excercise_id: {
-      type: DataTypes.INTEGER,
-      references: { model: "excercise", key: "id" },
-    },
-
     date: { type: DataTypes.DATEONLY, defaultValue: DataTypes.NOW },
 
     time: { type: DataTypes.DATE, defaultValue: DataTypes.TIME },
@@ -28,13 +23,17 @@ Set.init(
       validate: { isNumeric: true, min: 0 },
       defaultValue: 0,
     },
+    exercise_id: {
+      type: DataTypes.INTEGER,
+      references: { model: "exercise", key: "id", },
+    },
   },
   {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "sets",
+    modelName: "set",
   }
 );
 
