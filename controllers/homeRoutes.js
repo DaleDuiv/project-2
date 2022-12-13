@@ -12,16 +12,9 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-<<<<<<< HEAD
-  //write sequelize statement to get data from excercises table
-  //getAll
-  res.render('homepage');
-
-=======
   res.render('homepage', {
     logged_in: req.session.logged_in
   });
->>>>>>> main
 });
 
 module.exports = router;
