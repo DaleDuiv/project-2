@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Set } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/id', withAuth, async (req, res) => {
+router.post('/:id', withAuth, async (req, res) => {
     try {
       const newSet = await Set.create({
         reps: req.body.reps,
