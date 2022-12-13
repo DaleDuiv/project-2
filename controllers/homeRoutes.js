@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { User, Exercise, Set } = require('../models')
+const { Exercise, Set } = require('../models')
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
@@ -34,9 +34,9 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const exerciseData = await Exercise.findAll({
-        where: {
-          user_id: req.session.user_id
-        }
+      where: {
+        user_id: req.session.user_id
+      }
     });
 
     const setData = await Set.findAll({
