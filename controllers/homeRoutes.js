@@ -11,7 +11,10 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/', (req, res) => {
+  //write sequelize statement to get data from excercises table
+  //getAll
   res.render('homepage');
+
 });
 
 module.exports = router;

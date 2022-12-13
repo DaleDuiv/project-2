@@ -4,6 +4,7 @@ const sequelize = require("../config/connection.js");
 
 class User extends Model {
   //check password method goes here?
+  //THIS MUST BE WRITTEN, CHECK the public/js/login.js
 }
 
 User.init(
