@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { Exercise, Set } = require('../models')
+const { User, Exercise, Set } = require('../models');
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
@@ -17,7 +17,13 @@ router.get('/', async (req, res) => {
     const exerciseData = await Exercise.findAll({
         where: {
           user_id: req.session.user_id
-        }
+        },
+        include: [
+          {
+            model: User,
+            attributes: ['name']
+          }
+        ]
     });
 
     const exercises = exerciseData.map((exercise) => exercise.get({ plain: true }));
