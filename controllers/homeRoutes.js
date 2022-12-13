@@ -3,13 +3,13 @@ const withAuth = require('../utils/auth');
 const { User, Exercise, Set } = require('../models');
 
 router.get('/login', (req, res) => {
-    if (req.session.logged_in) {
-      res.redirect('/');
-      
-      return;
-    }
-  
-    res.render('login');
+  if (req.session.logged_in) {
+    res.redirect('/');
+    
+    return;
+  }
+
+  res.render('login');
 });
 
 router.get('/', async (req, res) => {
