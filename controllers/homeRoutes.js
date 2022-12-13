@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
 
     const exercises = exerciseData.map((exercise) => exercise.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render("homepage", {
         exercises,
         logged_in: req.session.logged_in
     })
