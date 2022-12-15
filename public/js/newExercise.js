@@ -1,13 +1,21 @@
-const newExerciseHandler = (event) => {
+const newExerciseHandler = async (event) => {
   event.preventDefault();
-  //var exerciseModal = document.getElementById("id01");
-  document.getElementById("exampleModal").style.display = "show";
 
-  // window.alert("Hello World");
+  const exerciseName = document.getElementById("exerciseName").value.trim();
+
+  const response = await fetch("/api/exercises", {
+    method: "POST",
+    body: JSON.stringify({ exerciseName }),
+    headers: { "Content-Type": "application/json" },
+  });
+  if (response.ok) {
+    document.location.replace("/");
+  } else {
+    alert(response.statusText);
+  }
 };
 
 //submit button, to display the add
-var newExerciseButton = document.getElementById("001");
 
-newExerciseButton.addEventListener("click", newExerciseHandler);
-document.getElementById("exampleModal").style.display = "none";
+var submitButton = document.getElementById("submitBtn");
+submitButton.addEventListener("click", newExerciseHandler);
