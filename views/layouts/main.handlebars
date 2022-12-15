@@ -14,7 +14,7 @@
 <body>
   <div class="flex-column justify-space-around">
   
-    <header class="display-flex justify-content-center align-center fixed-top bg-dark">
+    {{!-- <header class="display-flex justify-content-center align-center fixed-top bg-dark">
         <h1 class= "text-center">
           <a href="/">Workout Tracker!</a>
         </h1>
@@ -25,6 +25,15 @@
         <a href="/logout" class="text-right" id="logout" >Logout</a>
         {{/if}}
       </nav>
+    </header> --}}
+    <header class="d-flex justify-content-between align-items-center fixed-top bg-dark">
+      {{#if logged_in}}
+      <a>Welcome {{user.name}}</a>  
+      {{/if}}
+      <a href="/">Workout Tracker!</a>
+      {{#if logged_in}}
+      <a href="/logout" id="logout" >Logout</a>
+      {{/if}}
     </header>
       <!-- Render the sub layout -->
       {{{ body }}}

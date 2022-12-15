@@ -2,11 +2,11 @@
   <div class="container">
     <h3>Select an exercise from the list to view or record your progress</h3>
     <ul>
-      {{#each exercises as |exercise|}}
-      <li><a href="{{./exercises.id}}">{{exercises.exercisesName}}</a></li>
+      {{#each user.exercises as |exercise|}}
+      <li><a href="{{./exercise.id}}">{{exercise.exercisesName}}</a></li>
       {{/each}}
       </ul>
-  </div>
+
   <!-- Button trigger modal -->
  <h3>Would you like to add a new exercise?</h3>
 <button type="submit" class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleModal">
