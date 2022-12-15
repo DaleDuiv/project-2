@@ -2,31 +2,38 @@ header,
 .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+body {
+  --color-primary: #009579;
+  --color-primary-dark: #007f67;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: url(../img/gym-training-1.jpg);
+  background-size: cover;
+  color: whitesmoke;
 }
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+.container-local {
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+  color: black;
 }
-
 a {
   text-decoration: none;
   color: white;
 }
-
 header {
   padding: 1rem;
 }
-
 @media screen and (min-width: 601px) {
   .container {
     width: 600px;

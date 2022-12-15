@@ -3,7 +3,7 @@
     <h3>Select an exercise from the list to view or record your progress</h3>
     <ul>
       {{#each user.exercises as |exercise|}}
-      <li><a href="{{./exercise.id}}">{{exercise.exercisesName}}</a></li>
+      <li><a href="/{{exercise.id}}">{{exercise.exerciseName}}</a></li>
       {{/each}}
       </ul>
 
