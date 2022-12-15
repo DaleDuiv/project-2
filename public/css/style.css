@@ -1,7 +1,7 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-
 body {
   --color-primary: #009579;
   --color-primary-dark: #007f67;
@@ -9,7 +9,6 @@ body {
   --color-error: #cc3333;
   --color-success: #4bb544;
   --border-radius: 4px;
-
   margin: 0;
   height: 100vh;
   display: flex;
@@ -20,7 +19,6 @@ body {
   background-size: cover;
   color: whitesmoke;
 }
-
 .container-local {
   margin: 1rem;
   padding: 2rem;
@@ -29,20 +27,13 @@ body {
   background: #ffffff;
   color: black;
 }
-
 a {
   text-decoration: none;
   color: white;
 }
-
 header {
   padding: 1rem;
 }
-
-
-
-
-
 @media screen and (min-width: 601px) {
   .container {
     width: 600px;
