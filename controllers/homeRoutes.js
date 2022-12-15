@@ -14,29 +14,23 @@ router.get('/login', async (req, res) => {
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const exerciseData = await Exercise.findAll({
-        where: {
-          user_id: req.session.user_id
-        },
+    const userData = await User.findByPk(req.session.user_id,{
         include: [
           {
-            model: User,
-            attributes: ['name']
+            model: Exercise,
+            attributes: ['exerciseName']
           }
         ]
     });
-
-    // const userData = await User.findByPk(req.session.user_id)
-    
-    const exercises = exerciseData.map((exercise) => exercise.get({ plain: true }));
-
-    // const users = userData.map((user) => user.get({ plain: true }));
-    
+   
+    const user = userData.get({ plain: true });
+    console.log(user);
     res.render("homepage", {
-        exercises,
+        user,
         logged_in: req.session.logged_in
     })
 } catch (error) {
+    console.log("message", error);
     res.status(500).json(error)
 }
 });
