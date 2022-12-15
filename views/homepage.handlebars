@@ -1,15 +1,14 @@
 {{!-- <div class="container"> --}}
-{{#each exercises as |exercise|}}
-  <div class="container-left">
-    <p>add exercise list here</p>
+  <div class="container">
+    <h3>Select an exercise from the list to view or record your progress</h3>
     <ul>
-      <li>Squats</li>
-      <li>add another exercise</li>
-
-    </ul>
+      {{#each exercises as |exercise|}}
+      <li><a href="{{./exercises.id}}">{{exercises.exercisesName}}</a></li>
+      {{/each}}
+      </ul>
   </div>
-  {{/each}}
- <!-- Button trigger modal -->
+  <!-- Button trigger modal -->
+ <h3>Would you like to add a new exercise?</h3>
 <button type="submit" class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleModal">
   New Exercise
 </button>
@@ -37,7 +36,7 @@
     </div>
   </div>
 </div>
-  {{/each}}
+</div>
 {{!-- </div> --}}
 
 

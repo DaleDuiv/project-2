@@ -2,7 +2,7 @@ const router = require("express").Router();
 const withAuth = require("../utils/auth");
 const { User, Exercise, Set } = require("../models");
 
-router.get("/login", (req, res) => {
+router.get("/login", async (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
 
@@ -12,7 +12,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const exerciseData = await Exercise.findAll({
       where: {
@@ -26,12 +26,17 @@ router.get("/", async (req, res) => {
       ],
     });
 
+    // const userData = await User.findByPk(req.session.user_id)
+
     const exercises = exerciseData.map((exercise) =>
       exercise.get({ plain: true })
     );
 
+    // const users = userData.map((user) => user.get({ plain: true }));
+
     res.render("homepage", {
       exercises,
+      // users,
       logged_in: req.session.logged_in,
     });
   } catch (error) {

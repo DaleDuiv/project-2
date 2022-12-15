@@ -17,3 +17,30 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
+=======
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  padding: 1rem;
+}
+
+#user-container {
+  margin-top: 7rem;
+}
+
+
+
+
+
+
+@media screen and (min-width: 601px) {
+  .container {
+    width: 600px;
+    max-width: 600px;
+  }
+}
+>>>>>>> main
