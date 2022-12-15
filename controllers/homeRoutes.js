@@ -18,7 +18,7 @@ router.get("/", withAuth, async (req, res) => {
       include: [
         {
           model: Exercise,
-          attributes: ["exerciseName"],
+          attributes: ["id", "exerciseName"],
         },
       ],
     });

@@ -13,36 +13,43 @@
 
 <body>
   <div class="flex-column justify-space-around">
-  
-    {{!-- <header class="display-flex justify-content-center align-center fixed-top bg-dark">
-        <h1 class= "text-center">
-          <a href="/">Workout Tracker!</a>
-        </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <p>Welcome {{exercises.user.name}}</p>
-        <a href="/logout" class="text-right" id="logout" >Logout</a>
-        {{/if}}
-      </nav>
-    </header> --}}
-    <header class="d-flex justify-content-between align-items-center fixed-top bg-dark">
+    {{!-- <header class="d-flex justify-content-between align-items-center fixed-top bg-dark">
       {{#if logged_in}}
       <a>Welcome {{user.name}}</a>  
       {{/if}}
-      <a href="/">Workout Tracker!</a>
+      <h1 class="text-center">
+        <a href="/">Workout Tracker!</a>
+      </h1>
       {{#if logged_in}}
       <a href="/logout" id="logout" >Logout</a>
       {{/if}}
+    </header> --}}
+
+    {{#if logged_in}}
+    <header class="d-flex justify-content-between align-items-center fixed-top bg-dark">
+      <a>Welcome {{user.name}}</a>  
+      <h1>
+        <a href="/">Workout Tracker!</a>
+      </h1>
+      <a href="/logout" id="logout" >Logout</a>
     </header>
+    {{else}}
+    <header class="d-flex justify-content-center align-items-center fixed-top bg-dark">
+      <h1>
+        <a href="/">Workout Tracker!</a>
+      </h1>
+    </header>
+    {{/if}}
       <!-- Render the sub layout -->
       {{{ body }}}
-    <footer class="bg-dark py-5 mt-5">
+
+
+    {{!-- <footer class="bg-dark py-5 mt-5">
       <div class="container text-light text-center">
       <p class="display-5 mb-3"> Contact Us! </p>
       <small class="text-white-50">&copy; Copyright by Group2-b </small>
       </div>
-    </footer>
+    </footer> --}}
   </div>
 
   <!-- Render script for logged in users only -->
