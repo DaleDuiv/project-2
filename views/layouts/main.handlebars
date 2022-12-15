@@ -14,17 +14,15 @@
 <body>
   <div class="flex-column justify-space-around">
   
-    <header class="display-flex justify-content-center align-center fixed-top">
+    <header class="display-flex justify-content-center align-center fixed-top bg-dark">
         <h1 class= "text-center">
           <a href="/">Workout Tracker!</a>
         </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        Welcome {{user_name}}
+        <p>Welcome {{exercises.user.name}}</p>
         <a href="/logout" class="text-right" id="logout" >Logout</a>
-        {{else}}
-        <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
