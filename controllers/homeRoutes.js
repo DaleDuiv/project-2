@@ -34,7 +34,6 @@ router.get('/', withAuth, async (req, res) => {
     
     res.render("homepage", {
         exercises,
-        // users,
         logged_in: req.session.logged_in
     })
 } catch (error) {
@@ -42,7 +41,7 @@ router.get('/', withAuth, async (req, res) => {
 }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const exerciseData = await Exercise.findAll({
       where: {
