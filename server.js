@@ -42,3 +42,34 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
+
+const nodemailer = require('nodemailer')
+
+const sendMail = () =>{
+  const transporter = nodemailer.createTransport({
+      service : 'hotmail',
+      auth : {
+          user : 'testforbootcamp@outlook.com',
+          pass : 'TestPassword111'
+      }
+  })
+
+  const options = {
+      from : 'testforbootcamp@outlook.com', 
+      to : 'testforbootcamp@outlook.com', 
+      subject : "Test", 
+      text : 'Test message',
+  }
+
+  transporter.sendMail(options, (error, info) =>{
+      if (error) {
+        console.log(error) 
+      } else {
+        console.log(info);
+        console.log("it worked")
+      }
+  })
+
+}
+
+sendMail()
