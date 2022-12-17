@@ -5,6 +5,13 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
+  const errorMes = document.getElementById('pass-err')
+
+  if (!email || !password) {
+    errorMes.style.display = 'block'
+    errorMes.innerHTML = 'Inputs cannot be black'
+  }
+
   if (email && password) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/users/login', {
@@ -17,7 +24,16 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/');
     } else {
-      alert(response.statusText);
+        if (response.statusText === 'Invalid email, please try again') {
+          errorMes.style.display = 'block'
+          errorMes.innerHTML = 'Invalid email, please try again'
+        } else if (response.statusText === 'Incorrect password, please try again') {
+          errorMes.style.display = 'block'
+          errorMes.innerHTML = 'Incorrect password, please try again'
+        } else {
+          errorMes.style.display = 'block'
+          errorMes.innerHTML = 'Something went wrong, please try again'
+        }
     }
   }
 };
@@ -45,8 +61,8 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+  .querySelector('#login-button')
+  .addEventListener('click', loginFormHandler);
 
 document
   .querySelector('.signup-form')
