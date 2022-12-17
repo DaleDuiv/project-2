@@ -12,7 +12,7 @@ Set.init(
 
     //time: { type: DataTypes.DATE, defaultValue: DataTypes.TIME },
     date_created: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
@@ -30,7 +30,7 @@ Set.init(
     },
     exercise_id: {
       type: DataTypes.INTEGER,
-      references: { model: "exercise", key: "id", },
+      references: { model: "exercise", key: "id" },
     },
   },
   {

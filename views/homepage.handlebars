@@ -1,14 +1,14 @@
 {{!-- <div class="container"> --}}
-  <div class="container">
-    <h3>Select an exercise from the list to view or record your progress</h3>
-    <ul>
+  <div class="container-fluid">
+    <h2>What would you like to do?</h2>
+    <h4>Select an exercise and record your progress</h4>
+    <ul class="list-group">
       {{#each user.exercises as |exercise|}}
-      <li><a href="/{{exercise.id}}">{{exercise.exerciseName}}</a></li>
+      <li class="list-group-item list-group-item-action list-group-item-dark"><a href="/{{exercise.id}}">{{exercise.exerciseName}}</a></li>
       {{/each}}
       </ul>
-
-  <!-- Button trigger modal -->
- <h3>Would you like to add a new exercise?</h3>
+      <!-- Button trigger modal -->
+ <h4>Would you like to add a new exercise?</h4>
 <button type="submit" class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleModal">
   New Exercise
 </button>
