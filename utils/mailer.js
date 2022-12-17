@@ -7,14 +7,14 @@ const sendMail = (to) =>{
           user : process.env.EMAIL_USER,
           pass : process.env.EMAIL_PASSWORD
       }
-  })
+    })
 
   const options = {
       from : process.env.EMAIL_USER, 
       to, 
-      subject : "Test", 
-      text : 'Test message',
-  }
+      subject : "Thank You!", 
+      text : 'Thank you for signing up to our Workout Tracker! Created by Brodie, Dale and Shiham',
+    }
 
   transporter.sendMail(options, (error, info) =>{
       if (error) {
@@ -23,7 +23,7 @@ const sendMail = (to) =>{
         console.log(info);
         console.log("it worked")
       }
-  })
+    })
 
 }
 
