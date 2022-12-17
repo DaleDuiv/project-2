@@ -34,6 +34,12 @@ a {
 header {
   padding: 1rem;
 }
+.btn {
+  width: 100%;
+}
+button a {
+  color: black;
+}
 
 h5 {
   color: black;
@@ -44,3 +50,18 @@ h5 {
     max-width: 600px;
   }
 }
+
+@media screen and (min-width: 400px) {
+  .container {
+    width: 350px;
+    max-width: 350px;
+  }
+}
+
+/* @media screen and (max-width: 399px) {
+  body {
+
+  }
+}
+  
+} */
