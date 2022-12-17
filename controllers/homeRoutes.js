@@ -47,6 +47,7 @@ router.get("/:id", withAuth, async (req, res) => {
       where: {
         exercise_id: req.params.id,
       },
+      include: [{ model: Exercise }],
     });
 
     const exercises = exerciseData.map((exercise) =>

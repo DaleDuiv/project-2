@@ -1,17 +1,22 @@
 {{!-- <div class="container"> --}}
   <div class="container d-grid gap-2 col-4 mx-auto">
-    <h3>Select an exercise from the list to view or record your progress</h3>
-      <div class="d-grid gap-2 col-6 btn-group-vertical">
-        {{#each user.exercises as |exercise|}}
-        <a href="/{{exercise.id}}"><button class="btn btn-warning">{{exercise.exerciseName}}</button></a>
-        {{/each}}
-      </div>
+    <h2>What would you like to do?</h2>
+    <div class="d-grid gap-2 col-6 btn-group-vertical">
+      <h4>Select an exercise and record your progress</h4>
+    <ul class="list-group">
+      {{#each user.exercises as |exercise|}}
+      <li class="list-group-item list-group-item-action list-group-item-dark"><a href="/{{exercise.id}}">{{exercise.exerciseName}}</a></li>
+      {{/each}}
+      </ul>
+      <!-- Button trigger modal -->
+ <h4>Would you like to add a new exercise?</h4>
+<button type="submit" class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleModal">
+  New Exercise
+  
 
-  <!-- Button trigger modal -->
- <h3>Would you like to add a new exercise?</h3>
-<button type="submit" class="btn btn-warning" href="#" data-toggle="modal" data-target="#exampleModal">
-  New Exercise 
-</button>
+    </div>
+   </button> 
+  
 
 <!-- Modal -->
 
