@@ -1,16 +1,16 @@
 {{!-- <div class="container"> --}}
-  <div class="container">
+  <div class="container d-grid gap-2 col-4 mx-auto">
     <h3>Select an exercise from the list to view or record your progress</h3>
-    <ul>
-      {{#each user.exercises as |exercise|}}
-      <li><a href="/{{exercise.id}}">{{exercise.exerciseName}}</a></li>
-      {{/each}}
-      </ul>
+      <div class="d-grid gap-2 col-6 btn-group-vertical">
+        {{#each user.exercises as |exercise|}}
+        <a href="/{{exercise.id}}"><button class="btn btn-warning">{{exercise.exerciseName}}</button></a>
+        {{/each}}
+      </div>
 
   <!-- Button trigger modal -->
  <h3>Would you like to add a new exercise?</h3>
 <button type="submit" class="btn btn-warning" href="#" data-toggle="modal" data-target="#exampleModal">
-  New Exercise
+  New Exercise 
 </button>
 
 <!-- Modal -->
