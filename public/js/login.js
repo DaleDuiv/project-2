@@ -45,6 +45,20 @@ const signupFormHandler = async (event) => {
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
+  const errorMes = document.getElementById('sign-err')
+
+  if (!name || !email || !password) {
+    errorMes.style.display = 'block'
+    errorMes.innerHTML = 'Inputs cannot be blank'
+    return
+  }
+
+  if (password.length < 8) {
+    errorMes.style.display = 'block'
+    errorMes.innerHTML = 'Password must be at least 8 characters'
+    return
+  }
+
   if (name && email && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
@@ -55,7 +69,10 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert(response.statusText);
+      if (response.statusText === 'Email already has an account, please try another email') {
+        errorMes.style.display = 'block'
+        errorMes.innerHTML = 'Email already has an account, please try another email'
+      }
     }
   }
 };
@@ -65,5 +82,5 @@ document
   .addEventListener('click', loginFormHandler);
 
 document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
+  .querySelector('#signup-button')
+  .addEventListener('click', signupFormHandler);
