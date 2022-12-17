@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
+  <div class="d-flex row justify-content-evenly">
     {{!-- <header class="d-flex justify-content-between align-items-center fixed-top bg-dark">
       {{#if logged_in}}
       <a>Welcome {{user.name}}</a>  
@@ -41,15 +41,16 @@
     </header>
     {{/if}}
       <!-- Render the sub layout -->
+      
       {{{ body }}}
 
 
-    {{!-- <footer class="bg-dark py-5 mt-5">
+    <footer class="bg-dark py-5 mt-5 fixed-bottom">
       <div class="container text-light text-center">
       <p class="display-5 mb-3"> Contact Us! </p>
       <small class="text-white-50">&copy; Copyright by Group2-b </small>
       </div>
-    </footer> --}}
+    </footer>
   </div>
 
   <!-- Render script for logged in users only -->
