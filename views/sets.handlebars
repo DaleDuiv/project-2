@@ -15,12 +15,8 @@
      
     {{#if sets}}
     {{#each sets as |set|}}
-
-      
-     
-      <ul class="list-group">
-     <li class="list-group-item"> <span class="d-inline-block text-truncate" style="max-width: 238px;">{{formatDate set.date_created}}</span>
-     </li>
+    <ul class="list-group">
+     <li class="list-group-item">{{formatDate set.date_created}}</li>
       <li class="list-group-item">{{set.reps}} Reps, {{set.weight}} Kg</li>
       <span aria-hidden="true">&nbsp;</span>
       </ul>
