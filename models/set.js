@@ -12,7 +12,7 @@ Set.init(
 
     //time: { type: DataTypes.DATE, defaultValue: DataTypes.TIME },
     date_created: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
