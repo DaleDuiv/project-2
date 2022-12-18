@@ -1,6 +1,11 @@
 # Workout Tracker
 
 ## Description
+The Work Tracker helps you gain success in your fitness journey. 
+
+It allows you to record your workouts at the gym, including the type of exercise and details of the exercise such as number of repititions(reps), weights and other details. The app saves your data securely to a database. You can login from any device to record and view your progress at the gym from any device. All you require is an internet connection and a web browser.
+
+Deployed application link: ## 
 
 ## Table of Contents
 
@@ -32,8 +37,19 @@ WHEN I click on ‘New Set’
 THEN I can add the reps and weight I performed and it is added along with the date an time it happened
 ```
 
-## Built With
+## Technologies used
+The following technologies have been used in the app: 
+- Node.js
+- HTML and CSS
 
+The following npm packages have been used in the app:
+ - bcrypt
+ - dotenv
+ - express
+ - express-handlebar
+ - mysql2
+ - nodemailer (_new_)
+ - sequelize": "^6.3.5"
 ## Installation
 
 ## Usage
