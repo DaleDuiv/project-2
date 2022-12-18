@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container container-fluid">
   <div class="row">
-    <div class="col-4">
+    <div class="col-12">
       <h4>My exercises</h4>
       <div class="list-group">
        {{#each exercises as |exercise|}}
@@ -9,25 +9,25 @@
       </div>
     </div>
    
-  <div class="col-8">
-    <h4>My Exercise Log</h4>
-     <p>{{exercise.exerciseName}}</p> 
+    <div class="col-8">
+      <h4>My Exercise Log</h4>
+      <p>{{exercise.exerciseName}}</p> 
      
-    {{#if sets}}
-    {{#each sets as |set|}}
+      {{#if sets}}
+      {{#each sets as |set|}}
 
       
      
       <ul class="list-group">
-     <li class="list-group-item"> <span class="d-inline-block text-truncate" style="max-width: 238px;">{{formatDate set.date_created}}</span>
-     </li>
+      <li class="list-group-item"> <span class="d-inline-block text-truncate" style="max-width: 238px;">{{formatDate set.date_created}}</span>
+      </li>
       <li class="list-group-item">{{set.reps}} Reps, {{set.weight}} Kg</li>
       <span aria-hidden="true">&nbsp;</span>
       </ul>
       {{/each}}
-     {{else}}
-     <p>Sorry no data was found!</p>
-     {{/if}} 
+      {{else}}
+      <p>Sorry no data was found!</p>
+      {{/if}} 
   <!-- Add new Set button-->
    
       <button type="submit" class="btn btn-warning" href="#" data-toggle="modal" data-target="#newSet">

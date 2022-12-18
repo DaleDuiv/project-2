@@ -3,11 +3,6 @@ header,
   border-bottom: 1px solid #ccc;
 }
 body {
-  --color-primary: #009579;
-  --color-primary-dark: #007f67;
-  --color-secondary: #252c6a;
-  --color-error: #cc3333;
-  --color-success: #4bb544;
   --border-radius: 4px;
   margin: 0;
   height: 100vh;
@@ -19,6 +14,10 @@ body {
   background-size: cover;
   color: whitesmoke;
 }
+h1, h2, h3, h4, h5, h6 {
+  color: #ffc107;
+}
+
 .container-local {
   margin: 1rem;
   padding: 2rem;
