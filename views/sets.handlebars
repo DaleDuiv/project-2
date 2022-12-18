@@ -1,34 +1,38 @@
-<div class="container container-fluid">
-  <div class="row">
-    <div class="col-12">
+{{!-- <div class="d-flex row"> --}}
+  <div class="row text-center">
+    <div class="col justify-content-center d-grid gap-2 mx-auto">
       <h4>My exercises</h4>
-      <div class="list-group">
+      <div class="list-group col-6 overflow-auto text-center">
        {{#each exercises as |exercise|}}
-      <a class="list-group-item list-group-item-action list-group-item-dark" href="/{{exercise.id}}">{{exercise.exerciseName}}</a>
+      <a class="list-group-item list-group-item-action list-group-item-dark " href="/{{exercise.id}}">{{exercise.exerciseName}}</a>
       {{/each}}
       </div>
     </div>
    
-    <div class="col-8">
-      <h4>My Exercise Log</h4>
-      <p>{{exercise.exerciseName}}</p> 
-     
-    {{#if sets}}
-    {{#each sets as |set|}}
-    <ul class="list-group">
-     <li class="list-group-item">{{formatDate set.date_created}}</li>
-      <li class="list-group-item">{{set.reps}} Reps, {{set.weight}} Kg</li>
-      <span aria-hidden="true">&nbsp;</span>
-      </ul>
-      {{/each}}
-      {{else}}
-      <p>Sorry no data was found!</p>
-      {{/if}} 
-  <!-- Add new Set button-->
-   
-      <button type="submit" class="btn btn-warning" href="#" data-toggle="modal" data-target="#newSet">
-      New Set
-      </button>
+    <div class="col justify-content-center d-grid gap-2 mx-auto">
+      <div class="col-12 overflow-x text-center">
+        <h4>My Exercise Log</h4>
+        <p class="bg-warning exercise-name">{{exercise.exerciseName}}</p> 
+      
+      <div class="log-container col-12 overflow-auto">
+      {{#if sets}}
+      {{#each sets as |set|}}
+        <ul class="list-group">
+          <li class="list-group-item">{{formatDate set.date_created}}</li>
+          <li class="list-group-item">{{set.reps}} Reps, {{set.weight}} Kg</li>
+          <span aria-hidden="true">&nbsp;</span>
+        </ul>
+        {{/each}}
+        {{else}}
+        <p>Sorry no data was found!</p>
+        {{/if}} 
+      </div>
+    <!-- Add new Set button-->
+      <br>
+        <button type="submit" class="btn btn-warning" href="#" data-toggle="modal" data-target="#newSet">
+        New Set
+        </button>
+      </div>
     </div>
 <!-- Modal -->
     <div class="modal  fade" id="newSet" tabindex="-1" role="dialog"  aria-hidden="true">
@@ -54,7 +58,7 @@
       </div>
     </div>
   </div>
-</div>
+{{!-- </div> --}}
 
 
 

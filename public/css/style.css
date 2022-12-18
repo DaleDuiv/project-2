@@ -5,7 +5,6 @@ header,
 body {
   --border-radius: 4px;
   margin: 0;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,9 +12,17 @@ body {
   background: url(../img/gym-training-1.jpg);
   background-size: cover;
   color: whitesmoke;
+  flex-direction: column;
+
+  /* max-height: fit-content; */
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   color: #ffc107;
+}
+
+.container {
+  margin-top: 100px;
+  flex: 1 1 auto;  /*grow vertically*/
 }
 
 .container-local {
@@ -26,46 +33,74 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
   color: black;
 }
+
+
 a {
   text-decoration: none;
   color: white;
 }
 header {
   padding: 1rem;
+  height: 50px;
 }
 .btn {
+  width: 100%;
+}
+.form-input {
   width: 100%;
 }
 button a {
   color: black;
 }
 
+.log-container {
+  max-height: 400px;
+}
+
 .list-group {
-  height: 400px;
+  max-height: 400px;
   width: 400px;
 }
 
-h5 {
-  color: black;
+
+.wd-100 {
+  width: 100%;
 }
-@media screen and (min-width: 601px) {
-  .container {
-    width: 600px;
-    max-width: 600px;
-  }
+.exercise-button {
+  width: 80%;
 }
 
-@media screen and (min-width: 400px) {
-  .container {
-    width: 350px;
+.exercise-name {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.modal-title {
+  color: black;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+
+ .row {
+  flex-direction: column;
+ }
+ .col {
+  flex-direction: row;
+ }
+} 
+
+@media only screen and (max-width: 520px) {
+  .exercise-list {
     max-width: 350px;
   }
 }
 
-/* @media screen and (max-width: 399px) {
-  body {
-
+@media only screen and (max-width: 400px) {
+  .exercise-list {
+    max-width: 300px;
   }
 }
-  
-} */

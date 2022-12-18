@@ -4,6 +4,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
+const favicon = require("serve-favicon");
 
 const sequelize = require("./config/connection.js");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -37,6 +38,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "js")));
+app.use(favicon(path.join(__dirname,'public','img','favicon.ico')));
 
 app.use(routes);
 
