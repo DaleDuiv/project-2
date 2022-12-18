@@ -41,6 +41,11 @@ button a {
   color: black;
 }
 
+.list-group {
+  height: 400px;
+  width: 400px;
+}
+
 h5 {
   color: black;
 }

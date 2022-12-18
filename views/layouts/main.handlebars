@@ -29,9 +29,9 @@
     <header class="d-flex justify-content-between align-items-center fixed-top bg-dark">
       <a>Welcome {{user.name}}</a>  
       <h1>
-        <a href="/">Workout Tracker!</a>
+        <a href="/" class="link-warning">Workout Tracker!</a>
       </h1>
-      <a href="/logout" id="logout" >Logout</a>
+      <a href="/logout" id="logout" class="link-light">Logout</a>
     </header>
     {{else}}
     <header class="d-flex justify-content-center align-items-center fixed-top bg-dark">
@@ -45,7 +45,7 @@
       {{{ body }}}
 
 
-    <footer class="bg-dark py-5 mt-5 fixed-bottom">
+    <footer class="py-1 mt-5 fixed-bottom">
       <div class="container text-light text-center">
       <p class="display-5 mb-3"> Contact Us! </p>
       <small class="text-white-50">&copy; Copyright by Group2-b </small>
