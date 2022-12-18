@@ -42,6 +42,7 @@ router.get("/:id", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
+    const exerciseName = await Exercise.findByPk(req.params.id);
 
     const setData = await Set.findAll({
       where: {
@@ -49,7 +50,7 @@ router.get("/:id", withAuth, async (req, res) => {
       },
       include: [{ model: Exercise }],
     });
-
+    const exercise = exerciseName.get({ plain: true });
     const exercises = exerciseData.map((exercise) =>
       exercise.get({ plain: true })
     );
@@ -58,6 +59,7 @@ router.get("/:id", withAuth, async (req, res) => {
 
     res.render("sets", {
       exercises,
+      exercise,
       sets,
       logged_in: req.session.logged_in,
     });
