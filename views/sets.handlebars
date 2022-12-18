@@ -9,24 +9,25 @@
       </div>
     </div>
    
-    <div class="col-8">
-      <h4>My Exercise Log</h4>
-      {{#if sets}}
-      {{#each sets as |set|}}
+  <div class="col-8">
+    <h4>My Exercise Log</h4>
+     <p>{{exercise.exerciseName}}</p> 
+     
+    {{#if sets}}
+    {{#each sets as |set|}}
 
-        <p>{{set.exercise.exerciseName}}</p> 
-        
       
-        <ul class="list-group">
-      <li class="list-group-item"> <span class="d-inline-block text-truncate" style="max-width: 238px;">{{set.date_created}}</span>
-      </li>
-        <li class="list-group-item">{{set.reps}} Reps, {{set.weight}} Kg</li>
-        <span aria-hidden="true">&nbsp;</span>
-        </ul>
-        {{/each}}
-      {{else}}
-      <p>Sorry no data was found!</p>
-      {{/if}} 
+     
+      <ul class="list-group">
+     <li class="list-group-item"> <span class="d-inline-block text-truncate" style="max-width: 238px;">{{set.date_created}}</span>
+     </li>
+      <li class="list-group-item">{{set.reps}} Reps, {{set.weight}} Kg</li>
+      <span aria-hidden="true">&nbsp;</span>
+      </ul>
+      {{/each}}
+     {{else}}
+     <p>Sorry no data was found!</p>
+     {{/if}} 
   <!-- Add new Set button-->
    
       <button type="submit" class="btn btn-warning" href="#" data-toggle="modal" data-target="#newSet">
