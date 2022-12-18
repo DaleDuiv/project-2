@@ -9,4 +9,4 @@ function formatDate(date) {
     return date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + "  " + strTime;
 }
 
-module.exports = format
+module.exports = formatDate
