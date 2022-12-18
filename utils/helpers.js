@@ -17,4 +17,4 @@ function formatDate(date) {
   );
 }
 
-module.exports = formatDate;
+module.exports = { formatDate };
