@@ -11,10 +11,11 @@
    
   <div class="col-8">
     <h4>My Exercise Log</h4>
+     <p>{{exercise.exerciseName}}</p> 
+     
     {{#if sets}}
     {{#each sets as |set|}}
 
-      <p>{{set.exercise.exerciseName}}</p> 
       
      
       <ul class="list-group">
