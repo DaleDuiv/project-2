@@ -17,7 +17,7 @@ const newSetHandler = async (event) => {
     headers: { "Content-Type": "application/json" },
   });
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace(`/${urlParameter[3]}`);
   } else {
     alert(response.statusText);
   }
