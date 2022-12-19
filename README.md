@@ -5,10 +5,7 @@ The Workout Tracker helps you gain success in your fitness journey.
 
 It allows you to record your workouts at the gym, including the type of exercise and details of the exercise such as number of repititions(reps), weights and other details. The app saves your data securely to a database. You can login from any device to record and view your progress at the gym from any device. All you require is an internet connection and a web browser.
 
-Deployed application link: ## 
-
-Preview of the homepage
-
+Deployed application link: [Workout-Tracker](https://ancient-eyrie-19788.herokuapp.com/)
 
 ## Table of Contents
 
@@ -17,6 +14,7 @@ Preview of the homepage
 - [Technologies used](#technologies-used)
 - [Installation](#installation)
 - [Usage instructions](#usage-instructions)
+- [Preview of the application](#preview-of-the-application)
 - [Credits](#credits)
 
 ## User Story
@@ -51,21 +49,22 @@ The following npm packages have been used in the app:
  - express
  - express-handlebar
  - mysql2
- - nodemailer (_new_)
+ - nodemailer (_new_ for sending welcome emails)
  - sequelize
+ - serve-favicon (_new_ for caching the favourites icon)
 
 ## Installation
 No installation required.
 
 ## Usage instructions
 ### First time user
-1. Visit ***
+1. Visit [Workout-Tracker](https://ancient-eyrie-19788.herokuapp.com/)
 2. Enter your name, email address and password
 3. Click on Sign up.
 4. You will recieve a welcome email with your login details.
 
 ### Returning user
-1. Visit ***
+1. Visit [Workout-Tracker](https://ancient-eyrie-19788.herokuapp.com/)
 2. Enter your email address and password
 3. Click on Login.
 
@@ -80,6 +79,17 @@ No installation required.
 2. Select Add Set > Add Set pop-up
 3. Enter reps and weight details
 4. Click Save.
+
+## Preview of the application
+
+### Login and Signup
+![login and signup page](./public/img/screenshot_login.png)
+
+### Exercises, with Add Exercises
+![exercises page](./public/img/screenshot_exercise.png)
+
+### Logs/Sets, with Add Sets
+![Sets page](./public/img/screenshot_sets.png)
 
 ## Credits
 
