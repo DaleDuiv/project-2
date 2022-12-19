@@ -94,6 +94,9 @@ button a {
 } 
 
 @media only screen and (max-width: 520px) {
+  body {
+    max-width: 400px;
+  }
   .exercise-list {
     max-width: 350px;
   }
